@@ -74,6 +74,7 @@ local plugins = {
         "mypy",
         "ruff",
         "pyright",
+        "beautysh",
       }
     }
   },
