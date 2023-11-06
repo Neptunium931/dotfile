@@ -1,3 +1,6 @@
+[core]
+	attributesfile = ~/.gitattributes
+
 [user]
 	email = tymothe.billerey@gmail.com
 	name = neptumiun
@@ -17,6 +20,9 @@
 [commit]
 	gpgsign = true
 
+[credential]
+	helper = cache --timeout=3600
+
 [color]
 	diff = auto
 	status = auto
@@ -30,10 +36,8 @@
 
 [diff]
 	colorMoved = default
-
 [diff "image"]
 	command = compare $2 $1 png:- | montage -geometry +4+4 $2 - $1 png:- | display -title \"$1\" -
-
 [merge]
 	conflictstyle = diff3
 	ff = no
@@ -42,5 +46,3 @@
 [delta]
 	navigate = true
 	light = false
-[safe]
-	directory = /root
