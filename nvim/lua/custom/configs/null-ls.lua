@@ -8,6 +8,7 @@ local opts = {
     null_ls.builtins.diagnostics.mypy,
     null_ls.builtins.diagnostics.ruff,
     null_ls.builtins.formatting.beautysh,
+    null_ls.builtins.formatting.asmfmt,
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then

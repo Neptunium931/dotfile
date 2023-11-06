@@ -75,6 +75,8 @@ local plugins = {
         "ruff",
         "pyright",
         "beautysh",
+        "asm-lsp",
+        "asmfmt",
       }
     }
   },

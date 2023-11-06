@@ -17,3 +17,8 @@ lspconfig.pyright.setup({
   capabilities = capabilities,
   filetypes = {"python"},
 })
+
+lspconfig.asm_lsp.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
