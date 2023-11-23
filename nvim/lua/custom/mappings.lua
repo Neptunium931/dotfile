@@ -31,4 +31,20 @@ M.general = {
     ["<S-q>"] = { "<cmd>Bdelete!<CR>", "close buffer"},
   }
 }
+
+M.vimtex = {
+  plugin = true,
+  n = {
+    ["<leader>lv"] = {
+      function()
+        vim.cmd("VimtexView")
+      end
+    },
+    ["<leader>ll"] = {
+      function()
+        vim.cmd("VimtexCompile")
+      end
+    }
+  }
+}
 return M
