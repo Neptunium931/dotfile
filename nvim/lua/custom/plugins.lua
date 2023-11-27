@@ -197,5 +197,11 @@ local plugins = {
       require("core.utils").load_mappings("vimtex")
     end
   },
+  {
+      "David-Kunz/gen.nvim",
+      opts = {
+          model = "mistral", -- The default model to use.
+      }
+  },
 }
 return plugins
