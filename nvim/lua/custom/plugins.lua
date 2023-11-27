@@ -79,6 +79,7 @@ local plugins = {
         "asmfmt",
         "latexindent",
         "proselint",
+        "rome",
       }
     }
   },
