@@ -199,8 +199,9 @@ local plugins = {
   },
   {
       "David-Kunz/gen.nvim",
+      cmd = { "Gen" },
       opts = {
-          model = "mistral", -- The default model to use.
+          model = "codellama:13b-instruct",
       }
   },
 }
