@@ -9,7 +9,7 @@ Environment=SATPAPER_RESOLUTION_Y=1504
 Environment=SATPAPER_DISK_SIZE=94
 Environment=SATPAPER_TARGET_PATH=/tmp/wall
 Environment=SATPAPER_WALLPAPER_COMMAND="feh --bg-scale"
-; Environment=XDG_CURRENT_DESKTOP=i3
+Environment=XDG_CURRENT_DESKTOP=i3
 
 ExecStart=/home/neptunium/.cargo/bin/satpaper
 Restart=on-failure
