@@ -11,6 +11,7 @@
 
 set $mod Mod4
 exec --no-startup-id setxkbmap -layout fr
+exec --no-startup-id dunst
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
