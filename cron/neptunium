@@ -1,1 +1,1 @@
-*/5 * * * * $HOME/.config/scripts/battry.sh
+*/5 * * * * /home/neptunium/.config/scripts/battry.sh

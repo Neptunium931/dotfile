@@ -2,6 +2,11 @@
 COLOR_SCHEME=dark # dark/light
 
 
+# Charger les fichiers .alias depuis ~/.config
+for alias_file in ~/.config/alias/*.alias; do
+    [ -r "$alias_file" ] && source "$alias_file"
+done
+
 # --------------------------------- ALIASES -----------------------------------
 alias ..='cd ..'
 alias cp='cp -v'
@@ -9,8 +14,10 @@ alias rm='rm -I'
 alias mv='mv -iv'
 alias ln='ln -sriv'
 alias xclip='xclip -selection c'
+alias last='echo `!!` | xclip'
 
 alias get='aria2c -x 16'
+alias sollama="systemctl --user start ollama-serve.service"
 
 tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }
 
@@ -399,3 +406,13 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
   exec tmux
 fi
 systemctl --user restart satpaper.service
+
+eval "$(rbenv init - zsh)"
+
+# pnpm
+export PNPM_HOME="/home/neptunium/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

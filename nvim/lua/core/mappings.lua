@@ -9,10 +9,10 @@ M.general = {
     ["<C-e>"] = { "<End>", "End of line" },
 
     -- navigate within insert mode
-    ["<a-h>"] = { "<Left>", "Move left" },
-    ["<a-l>"] = { "<Right>", "Move right" },
-    ["<a-j>"] = { "<Down>", "Move down" },
-    ["<a-k>"] = { "<Up>", "Move up" },
+    ["<C-h>"] = { "<Left>", "Move left" },
+    ["<C-l>"] = { "<Right>", "Move right" },
+    ["<C-j>"] = { "<Down>", "Move down" },
+    ["<C-k>"] = { "<Up>", "Move up" },
 
     -- fast quit insert mode
     ["jk"] = { "<ESC>", "fast quit insert mode"}
@@ -21,10 +21,10 @@ M.general = {
   n = {
     ["<Esc>"] = { ":noh <CR>", "Clear highlights" },
     -- switch between windows
-    ["<a-h>"] = { "<C-w>h", "Window left" },
-    ["<a-l>"] = { "<C-w>l", "Window right" },
-    ["<a-j>"] = { "<C-w>j", "Window down" },
-    ["<a-k>"] = { "<C-w>k", "Window up" },
+    ["<C-h>"] = { "<C-w>h", "Window left" },
+    ["<C-l>"] = { "<C-w>l", "Window right" },
+    ["<C-j>"] = { "<C-w>j", "Window down" },
+    ["<C-k>"] = { "<C-w>k", "Window up" },
 
     -- resize windows with arrows
     ["<C-Up>"] = { ":resize -2<CR>", "resize windows up"},
@@ -309,21 +309,21 @@ M.nvterm = {
 
   t = {
     -- toggle in terminal mode
-    ["<A-S-i>"] = {
+    ["<A-i>"] = {
       function()
         require("nvterm.terminal").toggle "float"
       end,
       "Toggle floating term",
     },
 
-    ["<A-S-h>"] = {
+    ["<A-h>"] = {
       function()
         require("nvterm.terminal").toggle "horizontal"
       end,
       "Toggle horizontal term",
     },
 
-    ["<A-S-v>"] = {
+    ["<A-v>"] = {
       function()
         require("nvterm.terminal").toggle "vertical"
       end,
@@ -333,21 +333,21 @@ M.nvterm = {
 
   n = {
     -- toggle in normal mode
-    ["<A-S-i>"] = {
+    ["<A-i>"] = {
       function()
         require("nvterm.terminal").toggle "float"
       end,
       "Toggle floating term",
     },
 
-    ["<A-S-h>"] = {
+    ["<A-h>"] = {
       function()
         require("nvterm.terminal").toggle "horizontal"
       end,
       "Toggle horizontal term",
     },
 
-    ["<A-S-v>"] = {
+    ["<A-v>"] = {
       function()
         require("nvterm.terminal").toggle "vertical"
       end,

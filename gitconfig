@@ -1,16 +1,18 @@
 [core]
-	attributesfile = ~/.gitattributes
+  attributesfile = ~/.gitattributes
 
 [user]
-	email = tymothe.billerey@gmail.com
-	name = neptumiun
-	signingkey = B102BA7BC5672A5D!
+  email = tymothe.billerey@gmail.com
+  name = neptumiun
+  signingkey = B102BA7BC5672A5D!
 
 [core]
-	editor = nvim
+  editor = nvim
+	mergeoptions = --ff-only
+  excludesfile = ~/.gitignore
 
 [init]
-	defaultBranch = master
+  defaultBranch = master
 
 [alias]
   lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)' --all
@@ -18,31 +20,30 @@
   lg = lg1
 
 [commit]
-	gpgsign = true
+  gpgsign = true
 
 [credential]
-	helper = cache --timeout=3600
+  helper = cache --timeout=3600
 
 [color]
-	diff = auto
-	status = auto
-	branch = auto
-	interactive = auto
-	ui = true
-	pager = true
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = true
+  pager = true
 
 [interactive]
-	diffFilter = delta --color-only
+  diffFilter = delta --color-only
 
 [diff]
-	colorMoved = default
+  colorMoved = default
 [diff "image"]
-	command = compare $2 $1 png:- | montage -geometry +4+4 $2 - $1 png:- | display -title \"$1\" -
+  command = compare $2 $1 png:- | montage -geometry +4+4 $2 - $1 png:- | display -title \"$1\" -
 [merge]
-	conflictstyle = diff3
-	ff = no
-	commit = no
+  conflictstyle = diff3
+  ff = only
 
 [delta]
-	navigate = true
-	light = false
+  navigate = true
+  light = false
