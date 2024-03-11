@@ -3,47 +3,38 @@ URxvt*scrollBar: false
 URxvt*scrollWithBuffer: true
 
 URxvt.font: xft:Hack Nerd Font Mono:size=11:style=Bold
-!
-! Generated with :
-! XRDB2Xreources.py
-!
-*.foreground:  #ffffce
-*.background:  #000000
-*.cursorColor: #bbbbbb
-!
-! Black
-*.color0:      #1d1d1d
-*.color8:      #000000
-!
-! Red
-*.color1:      #cda074
-*.color9:      #fecea0
-!
-! Green
-*.color2:      #9e744d
-*.color10:     #cc734d
-!
-! Yellow
-*.color3:      #fecf75
-*.color11:     #fd9f4d
-!
-! Blue
-*.color4:      #720102
-*.color12:     #cb4a05
-!
-! Magenta
-*.color5:      #734c4d
-*.color13:     #4e739f
-!
-! Cyan
-*.color6:      #979797
-*.color14:     #fed04d
-!
-! White
-*.color7:      #ffffce
-*.color15:     #ffffff
-!
-! Bold, Italic, Underline
-*.colorBD:     #ffffff
-!*.colorIT:
-!*.colorUL:
+
+*background: #1E1E2E
+*foreground: #CDD6F4
+
+! black
+*color0: #45475A
+*color8: #585B70
+
+! red
+*color1: #F38BA8
+*color9: #F38BA8
+
+! green
+*color2: #A6E3A1
+*color10: #A6E3A1
+
+! yellow
+*color3: #F9E2AF
+*color11: #F9E2AF
+
+! blue
+*color4: #89B4FA
+*color12: #89B4FA
+
+! magenta
+*color5: #F5C2E7
+*color13: #F5C2E7
+
+! cyan
+*color6: #94E2D5
+*color14: #94E2D5
+
+! white
+*color7: #BAC2DE
+*color15: #A6ADC8

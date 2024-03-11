@@ -5,3 +5,4 @@
 .local
 mirrorlist
 lazy-lock.json
+config/tmux/plugins/

@@ -21,10 +21,10 @@ M.general = {
   n = {
     ["<Esc>"] = { ":noh <CR>", "Clear highlights" },
     -- switch between windows
-    ["<C-h>"] = { "<C-w>h", "Window left" },
-    ["<C-l>"] = { "<C-w>l", "Window right" },
-    ["<C-j>"] = { "<C-w>j", "Window down" },
-    ["<C-k>"] = { "<C-w>k", "Window up" },
+    -- ["<C-h>"] = { "<C-w>h", "Window left" },
+    -- ["<C-l>"] = { "<C-w>l", "Window right" },
+    -- ["<C-j>"] = { "<C-w>j", "Window down" },
+    -- ["<C-k>"] = { "<C-w>k", "Window up" },
 
     -- resize windows with arrows
     ["<C-Up>"] = { ":resize -2<CR>", "resize windows up"},

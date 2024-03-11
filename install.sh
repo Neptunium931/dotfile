@@ -12,5 +12,5 @@ ln -s $PWD/zshrc $HOME/.zshrc
 ln -s $PWD/Xresources $HOME/.Xresources
 ln -s $PWD/gitconfig $HOME/.gitconfig
 ln -s $PWD/gitattributes $HOME/.gitattributes
-ln -s $PWD/tmux.conf $HOME/.tmux.conf
 ln -s $PWD/config/dunst $HOME/.config/dunst
+ln -s $PWD/config/tmux/ $HOME/.config/tmux
