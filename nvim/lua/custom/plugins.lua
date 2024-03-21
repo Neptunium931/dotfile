@@ -84,7 +84,7 @@ local plugins = {
         "latexindent",
         "proselint",
         "rome",
-        "rust_analyzer",
+        "rust-analyzer",
       }
     }
   },
