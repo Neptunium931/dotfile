@@ -1,0 +1,27 @@
+{
+    "code": {
+      "prefix": "code",
+      "body": [
+        "\\mint{$1} {$2}"
+      ],
+      "description": "Add a inline code"
+    },
+    "scode": {
+      "prefix": "scode",
+      "body": [
+        "\\inputminted[firstline=$1, lastline=$2]{cpp}{$3}"
+      ],
+      "description": "Add a source code file"
+    },
+    "codeblock" : {
+      "prefix": "codeblock",
+      "body": [
+        "\\begin{minted}[mathescape,",
+        " linenos,",
+        "]{cpp}",
+        "$1",
+        "\\end{minted}"
+      ],
+      "description": "Add a code block"
+    }
+}
