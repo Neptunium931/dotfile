@@ -6,8 +6,9 @@ local opts = {
     null_ls.builtins.formatting.clang_format,
     null_ls.builtins.formatting.black,
     null_ls.builtins.diagnostics.mypy,
-    null_ls.builtins.diagnostics.ruff,
-    null_ls.builtins.formatting.beautysh,
+    null_ls.builtins.formatting.shfmt.with({
+        extra_filetypes = { "zsh", "bash", "csh", "ksh" },
+    }),
     null_ls.builtins.formatting.asmfmt,
     null_ls.builtins.code_actions.proselint,
     null_ls.builtins.formatting.biome,
