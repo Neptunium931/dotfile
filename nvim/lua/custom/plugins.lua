@@ -83,7 +83,7 @@ local plugins = {
         "asmfmt",
         "latexindent",
         "proselint",
-        "rome",
+        "biome",
         "rust-analyzer",
       }
     }
