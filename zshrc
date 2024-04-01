@@ -417,4 +417,6 @@ case ":$PATH:" in
 esac
 # pnpm end
 
+eval "$(zoxide init --cmd cd zsh)"
+
 clear
