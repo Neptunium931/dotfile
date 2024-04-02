@@ -38,6 +38,10 @@
 [rerere]
   enabled = true
 
+[gc]
+  reflogExpire = never
+  reflogExpireUnreachable = never
+
 [diff]
   colorMoved = default
 [diff "image"]
