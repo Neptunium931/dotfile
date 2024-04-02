@@ -35,8 +35,8 @@
   ui = true
   pager = true
 
-[interactive]
-  diffFilter = delta --color-only
+[rerere]
+  enabled = true
 
 [diff]
   colorMoved = default
