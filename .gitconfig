@@ -22,6 +22,7 @@
 
 [commit]
   gpgsign = true
+  verbose = true
 
 [credential]
   helper = cache --timeout=3600
