@@ -1,5 +1,6 @@
 [core]
   attributesfile = ~/.gitattributes
+  whitespace = trailing-space,space-before-tab
 
 [user]
   email = tymothe.billerey@gmail.com
