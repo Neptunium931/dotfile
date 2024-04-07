@@ -10,6 +10,8 @@ g.transparency = config.ui.transparency
 g.vscode_snippets_path = vim.fn.stdpath "config" .. "/lua/custom/snippets"
 
 -------------------------------------- options ------------------------------------------
+
+vim.cmd('set colorcolumn=80')
 opt.laststatus = 3 -- global statusline
 opt.showmode = false
 
