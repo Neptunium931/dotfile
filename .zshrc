@@ -3,16 +3,12 @@ COLOR_SCHEME=dark # dark/light
 
 
 # Charger les fichiers .alias depuis ~/.config
-for alias_file in ~/.config/alias/*.alias; do
-    [ -r "$alias_file" ] && source "$alias_file"
-done
+# for alias_file in ~/.config/alias/*.alias; do
+#     [ -r "$alias_file" ] && source "$alias_file"
+# done
 
 # --------------------------------- ALIASES -----------------------------------
 alias ..='cd ..'
-alias cp='cp -v'
-alias rm='rm -I'
-alias mv='mv -iv'
-alias ln='ln -sriv'
 alias xclip='xclip -selection c'
 alias last='echo `!!` | xclip'
 
@@ -22,13 +18,19 @@ alias sollama="systemctl --user start ollama-serve.service"
 tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }
 
 ### Colorize commands
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-alias diff='diff --color=auto'
-alias ip='ip --color=auto'
-alias pacman='pacman --color=auto'
+if [[ $(uname) != "OpenBSD" ]]; then
+  alias cp='cp -v'
+  alias rm='rm -I'
+  alias mv='mv -iv'
+  alias ln='ln -sriv'
+  alias ls='ls --color=auto'
+  alias grep='grep --color=auto'
+  alias fgrep='fgrep --color=auto'
+  alias egrep='egrep --color=auto'
+  alias diff='diff --color=auto'
+  alias ip='ip --color=auto'
+  alias pacman='pacman --color=auto'
+fi
 
 ### LS & TREE
 alias ll='ls -la'
@@ -420,3 +422,4 @@ esac
 eval "$(zoxide init --cmd cd zsh)"
 
 clear
+export LANG=us_US.UTF-8

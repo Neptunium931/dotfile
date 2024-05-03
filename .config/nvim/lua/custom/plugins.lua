@@ -197,9 +197,5 @@ local plugins = {
           model = "codellama:13b-instruct",
       }
   },
-  {
-    'wakatime/vim-wakatime',
-     lazy = false
-  },
 }
 return plugins

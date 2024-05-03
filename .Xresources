@@ -38,3 +38,8 @@ URxvt.font: xft:Hack Nerd Font Mono:size=11:style=Bold
 ! white
 *color7: #BAC2DE
 *color15: #A6ADC8
+
+xterm*font: xft:Hack Nerd Font Mono:size=6:style=Bold
+XTerm*vt100.translations: #override \
+    Alt Ctrl <Key> C: copy-selection(CLIPBOARD) \n\
+    Alt Ctrl <Key> V: insert-selection(CLIPBOARD)
