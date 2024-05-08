@@ -197,5 +197,20 @@ local plugins = {
           model = "codellama:13b-instruct",
       }
   },
+  {
+    "ThePrimeagen/refactoring.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    init = function()
+      require("core.utils").load_mappings("refactor")
+    end,
+    keys = { "<leader>ri", "<leader>rI", "<leader>rb", "<leader>rbf", "<leader>re", "<leader>rf", "<leader>rv", "<leader>ri", },
+    cmd = { "Refactor"},
+    config = function()
+      require("refactoring").setup()
+    end,
+  },
 }
 return plugins
