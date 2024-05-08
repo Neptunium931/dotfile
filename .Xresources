@@ -40,6 +40,7 @@ URxvt.font: xft:Hack Nerd Font Mono:size=11:style=Bold
 *color15: #A6ADC8
 
 xterm*font: xft:Hack Nerd Font Mono:size=6:style=Bold
+xterm*scrollBar: false
 XTerm*vt100.translations: #override \
     Alt Ctrl <Key> C: copy-selection(CLIPBOARD) \n\
     Alt Ctrl <Key> V: insert-selection(CLIPBOARD)
