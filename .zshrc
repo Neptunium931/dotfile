@@ -151,6 +151,7 @@ export LESS_TERMCAP_us=$'\e[1;4;31m'
 export LESSHISTFILE=-
 export PATH=$HOME/.cargo/bin/:$PATH
 export PATH=$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin:$HOME/.local/bin
+export PATH=$PATH:$HOME/.rvm/bin/
 
 # colorize ls
 [ -x /usr/bin/dircolors ] && eval "$(dircolors -b)"
