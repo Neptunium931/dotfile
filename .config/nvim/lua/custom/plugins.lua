@@ -199,7 +199,11 @@ local plugins = {
   },
   {
     'wakatime/vim-wakatime',
-     lazy = false
+    lazy = false
+  },
+  {
+    'Exafunction/codeium.vim',
+    event = 'BufEnter'
   },
 }
 return plugins
