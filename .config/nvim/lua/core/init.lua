@@ -110,6 +110,10 @@ autocmd("BufWritePost", {
   end,
 })
 
+vim.cmd [[
+  autocmd BufRead,BufNewFile *.edge set filetype=html
+]]
+
 -------------------------------------- commands ------------------------------------------
 local new_cmd = vim.api.nvim_create_user_command
 

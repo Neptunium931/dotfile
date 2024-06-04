@@ -11,7 +11,7 @@ local opts = {
     }),
     null_ls.builtins.formatting.asmfmt,
     null_ls.builtins.code_actions.proselint,
-    null_ls.builtins.formatting.biome,
+null_ls.builtins.formatting.prettier,
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then

@@ -38,3 +38,9 @@ lspconfig.rust_analyzer.setup {
     ['rust-analyzer'] = {},
   },
 }
+
+lspconfig.vtsls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = {"typescript", "typescriptreact", "typescript.tsx"},
+}

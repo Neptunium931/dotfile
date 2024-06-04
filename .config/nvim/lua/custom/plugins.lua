@@ -83,8 +83,11 @@ local plugins = {
         "asmfmt",
         "latexindent",
         "proselint",
-        "biome",
         "rust-analyzer",
+        "eslint-lsp",
+        "js-debug-adapter",
+        "prettier",
+        "typescript-language-server",
       }
     }
   },
@@ -209,6 +212,13 @@ local plugins = {
       vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true, silent = true })
       vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true, silent = true })
       vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
+    end
+  },
+  {
+    "mfussenegger/nvim-lint",
+    event = "VeryLazy",
+    config = function()
+      require "custom.configs.lint"
     end
   },
 }
