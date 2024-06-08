@@ -425,4 +425,6 @@ esac
 
 eval "$(zoxide init --cmd cd zsh)"
 
+setopt completealiases
+
 clear
