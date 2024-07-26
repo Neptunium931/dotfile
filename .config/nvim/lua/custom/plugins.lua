@@ -221,5 +221,9 @@ local plugins = {
       require "custom.configs.lint"
     end
   },
+  {
+    "bjoernd/vim-syntax-simics",
+    ft = { "simics" }
+  }
 }
 return plugins
