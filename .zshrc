@@ -47,6 +47,8 @@ command -v batcat > /dev/null && \
 ### TOP
 command -v htop > /dev/null && alias top='htop'
 
+command -v \time > /dev/null && alias time='/usr/bin/time -f "\nreal\t%E\nuser\t%U\nsys\t%S\nCPU\t%P\nmem\t%M KB"'
+
 # --------------------------------- SETTINGS ----------------------------------
 setopt AUTO_CD
 setopt BEEP
