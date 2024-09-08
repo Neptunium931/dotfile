@@ -1,0 +1,13 @@
+alias ..='cd ..'
+alias cp='cp -v'
+alias rm='rm -I'
+alias mv='mv -iv'
+alias ln='ln -sriv'
+alias xclip='xclip -selection c'
+alias last='echo `!!` | xclip'
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias diff='diff --color=auto'
+alias ip='ip --color=auto'
+alias pacman='pacman --color=auto'
