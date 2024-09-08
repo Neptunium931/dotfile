@@ -23,19 +23,6 @@ local plugins = {
     end
   },
   {
-    "mfussenegger/nvim-dap-python",
-    ft = "python",
-    dependencies = {
-      "mfussenegger/nvim-dap",
-      "rcarriga/nvim-dap-ui",
-    },
-    config = function(_, _)
-      local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
-      require("dap-python").setup(path)
-      require("core.utils").load_mappings("dap_python")
-    end,
-  },
-  {
     "jay-babu/mason-nvim-dap.nvim",
     event = "VeryLazy",
     dependencies = {
@@ -224,6 +211,19 @@ local plugins = {
   {
     "bjoernd/vim-syntax-simics",
     ft = { "simics" }
-  }
+  },
+  {
+    "ThePrimeagen/refactoring.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    cmd = {
+      "Refactor",
+    },
+    config = function()
+      require("refactoring").setup()
+    end,
+  },
 }
 return plugins
