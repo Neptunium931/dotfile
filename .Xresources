@@ -2,8 +2,8 @@ URxvt*scrollTtyOutput: false
 URxvt*scrollBar: false
 URxvt*scrollWithBuffer: true
 
-! URxvt.font: xft:Hack Nerd Font Mono:size=11:style=Bold
-URxvt.font: xft:Cascadia Code NF,Cascadia Code NF SemiBold:style=SemiBold,Regular:size=11
+! URxvt.font: xft:Hack Nerd Font Mono:size=11:style=gold
+URxvt.font: xft:Cascadia Code NF SemiBold:style=SemiBold,Regular:size=31
 
 *.foreground:  #ebdbb2
 *.background:  #282828
