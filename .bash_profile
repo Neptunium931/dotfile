@@ -15,4 +15,32 @@ cyn='\[\033[01;36m\]' # Cyan
 wht='\[\033[01;37m\]' # White
 clr='\[\033[00m\]'    # Reset
 
-get -o vi
+export VISUAL=nvim
+export EDITOR=$VISUAL
+export GPG_TTY=$(tty)
+
+# arduino
+export ARDUINO_DIR=/usr/share/arduino/
+export ARDMK_DIR=$HOME/.arduino/
+export AVR_TOOLS_DIR=/usr
+export ARDUINO_LIB_PATH=/home/neptunium/.arduino/lib/
+
+export PATH=$HOME/.cargo/bin/:$PATH
+export PATH=$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin:$HOME/.local/bin
+export PATH=$PATH:$HOME/.rvm/bin/
+
+eval "$(rbenv init - bash)"
+
+# pnpm
+export PNPM_HOME="/home/neptunium/.local/share/pnpm"
+case ":$PATH:" in
+*":$PNPM_HOME:"*) ;;
+*) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+eval "$(zoxide init --cmd cd zsh)"
+
+setopt completealiases
+
+set -o vi
