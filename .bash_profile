@@ -38,9 +38,3 @@ case ":$PATH:" in
 *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-
-eval "$(zoxide init --cmd cd zsh)"
-
-setopt completealiases
-
-set -o vi
