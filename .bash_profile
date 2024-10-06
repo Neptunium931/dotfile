@@ -26,7 +26,7 @@ export AVR_TOOLS_DIR=/usr
 export ARDUINO_LIB_PATH=/home/neptunium/.arduino/lib/
 
 export PATH=$HOME/.cargo/bin/:$PATH
-export PATH=$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin:$HOME/.local/bin
+export PATH=$PATH:$HOME/.local/share/gem/ruby/3.2.0/bin:$HOME/.local/bin
 export PATH=$PATH:$HOME/.rvm/bin/
 
 eval "$(rbenv init - bash)"
