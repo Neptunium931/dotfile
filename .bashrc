@@ -38,5 +38,5 @@ PS1='\[\e[96m\]\u@\H\[\e[0m\] \[\e[38;5;35m\]\w\[\e[0m\](\[\e[93m\]${PS1_CMD1}\[
 printInfo
 
 set -o vi
-setxkbmap -layout us -variant altgr-intl -option "caps:swapescape"
+setxkbmap -layout fr -variant us -option "caps:swapescape"
 eval "$(zoxide init --cmd cd bash)"
