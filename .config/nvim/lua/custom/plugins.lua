@@ -183,23 +183,23 @@ local plugins = {
       "David-Kunz/gen.nvim",
       cmd = { "Gen" },
       opts = {
-          model = "codellama:13b-instruct",
+          model = "deepseek-r1:7b",
       }
   },
   {
     'wakatime/vim-wakatime',
     lazy = false
   },
-  {
-    'Exafunction/codeium.vim',
-    event = 'BufEnter',
-    config = function ()
-      vim.keymap.set('i', '<C-g>', function () return vim.fn['codeium#Accept']() end, { expr = true, silent = true })
-      vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true, silent = true })
-      vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true, silent = true })
-      vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
-    end
-  },
+  -- {
+  --   'Exafunction/codeium.vim',
+  --   event = 'BufEnter',
+  --   config = function ()
+  --     vim.keymap.set('i', '<C-g>', function () return vim.fn['codeium#Accept']() end, { expr = true, silent = true })
+  --     vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true, silent = true })
+  --     vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true, silent = true })
+  --     vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
+  --   end
+  -- },
   {
     "mfussenegger/nvim-lint",
     event = "VeryLazy",
