@@ -221,7 +221,12 @@ local plugins = {
       "Refactor",
     },
     config = function()
-      require("refactoring").setup()
+      require("refactoring").setup({
+        prompt_func_return_type = {
+            cpp = true,
+            c = true,
+        },
+      })
     end,
   },
 }
