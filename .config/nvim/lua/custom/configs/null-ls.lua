@@ -3,15 +3,19 @@ local null_ls = require("null-ls")
 
 local opts = {
   sources = {
-    null_ls.builtins.formatting.clang_format,
-    null_ls.builtins.formatting.black,
+    null_ls.builtins.formatting.clang_format.with({
+      extra_filetypes = {"c", "cpp"}
+    }),
+    null_ls.builtins.formatting.black.with({
+        extra_filetypes = { "python" },
+    }),
     null_ls.builtins.diagnostics.mypy,
     null_ls.builtins.formatting.shfmt.with({
         extra_filetypes = { "zsh", "bash", "csh", "ksh" },
     }),
     null_ls.builtins.formatting.asmfmt,
     null_ls.builtins.code_actions.proselint,
-null_ls.builtins.formatting.prettier,
+    null_ls.builtins.formatting.prettier,
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then

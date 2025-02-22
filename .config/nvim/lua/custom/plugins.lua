@@ -58,7 +58,6 @@ local plugins = {
     opts = {
       ensure_installed = {
         "clangd",
-        "clang-format",
         "codelldb",
         "black",
         "debugpy",
