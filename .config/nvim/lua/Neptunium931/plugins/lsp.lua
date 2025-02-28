@@ -36,6 +36,8 @@ return {
 			vim.cmd("MasonInstall " .. table.concat(ensure_installed, " "))
 		end, {})
 
+    require("luasnip.loaders.from_vscode").lazy_load()
+
 		require("fidget").setup({})
 		require("mason").setup({
 		})
