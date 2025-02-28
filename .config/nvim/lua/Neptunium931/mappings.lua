@@ -12,7 +12,7 @@ M.general = {
 M.general = {
   n = {
     -- close buffer
-    ["<S-q>"] = { "<cmd>Bdelete!<CR>", "close buffer"},
+    ["<S-q>"] = { "<cmd>Bdelete<CR>", "close buffer"},
   }
 }
 
