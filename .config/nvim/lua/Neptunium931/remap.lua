@@ -1,10 +1,22 @@
-local maping = require('Neptunium931.mappings')
 local key = vim.keymap
-
-key.set('n', '<leader>pv', vim.cmd.Ex)
-
 local g = vim.g
 local opt = vim.opt
+
+key.set('n', '<leader>pv', vim.cmd.Ex)
+key.set("n", "<S-q>", function () vim.cmd("bdelete") end)
+key.set("n", "<leader>lv", function() vim.cmd("VimtexView")    end)
+key.set("n", "<leader>ll", function() vim.cmd("VimtexCompile") end)
+
+-- refactoring.nvim
+key.set("x", "<leader>re", function() require('refactoring').refactor('Extract Function') end)
+key.set("x", "<leader>rf", function() require('refactoring').refactor('Extract Function To File') end)
+key.set("x", "<leader>rv", function() require('refactoring').refactor('Extract Variable') end)
+key.set("n", "<leader>rI", function() require('refactoring').refactor('Inline Function') end)
+key.set({ "n", "x" }, "<leader>ri", function() require('refactoring').refactor('Inline Variable') end)
+key.set("n", "<leader>rb", function() require('refactoring').refactor('Extract Block') end)
+key.set("n", "<leader>rbf", function() require('refactoring').refactor('Extract Block To File') end)
+
+
 
 g.mapleader = ' '
 g.c_syntax_for_h = 1
@@ -38,6 +50,6 @@ g.mapleader = " "
 
 -- disable some default providers
 for _, provider in ipairs { "node", "perl", "python3", "ruby" } do
-  vim.g["loaded_" .. provider .. "_provider"] = 0
+	vim.g["loaded_" .. provider .. "_provider"] = 0
 end
 
