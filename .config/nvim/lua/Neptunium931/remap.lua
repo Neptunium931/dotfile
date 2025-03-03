@@ -1,4 +1,5 @@
 local key = vim.keymap
+
 local g = vim.g
 local opt = vim.opt
 
@@ -16,7 +17,13 @@ key.set({ "n", "x" }, "<leader>ri", function() require('refactoring').refactor('
 key.set("n", "<leader>rb", function() require('refactoring').refactor('Extract Block') end)
 key.set("n", "<leader>rbf", function() require('refactoring').refactor('Extract Block To File') end)
 
+key.set('n', '<leader>m', ':make<CR><CR>:cw<CR>:.cc<CR>')
+key.set('n', '<leader>qn', ':cn<CR>')
+key.set('n', '<leader>qp', ':cp<CR>')
 
+
+key.set("n", "<leader>/", "gcc")
+key.set("v", "<leader>/", "gc")
 
 g.mapleader = ' '
 g.c_syntax_for_h = 1
@@ -50,6 +57,6 @@ g.mapleader = " "
 
 -- disable some default providers
 for _, provider in ipairs { "node", "perl", "python3", "ruby" } do
-	vim.g["loaded_" .. provider .. "_provider"] = 0
+  vim.g["loaded_" .. provider .. "_provider"] = 0
 end
 
