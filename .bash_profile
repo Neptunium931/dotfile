@@ -28,6 +28,7 @@ export ARDUINO_LIB_PATH=/home/neptunium/.arduino/lib/
 export PATH=$HOME/.cargo/bin/:$PATH
 export PATH=$PATH:$HOME/.local/share/gem/ruby/3.3.0/bin:$HOME/.local/bin
 export PATH=$PATH:$HOME/.rvm/bin/
+export PATH=$PATH:$HOME/perso/bin
 
 # pnpm
 export PNPM_HOME="/home/neptunium/.local/share/pnpm"
@@ -36,4 +37,7 @@ case ":$PATH:" in
 *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-. $HOME/.bashrc
+
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
