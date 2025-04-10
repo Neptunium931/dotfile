@@ -54,11 +54,19 @@ return {
         "clangd",
         "ruff",
         "pyright",
+        "ltex",
       },
       handlers = {
         function(server_name) -- default handler (optional)
           require("lspconfig")[server_name].setup {
             capabilities = capabilities
+          }
+        end,
+        ["ltex"] = function ()
+          local lspconfig = require("lspconfig")
+          lspconfig.ltex.setup {
+            language = "en-GB",
+            enabled = { "bibtex", "gitcommit", "markdown", "org", "tex", "restructuredtext", "rsweave", "latex", "quarto", "rmd", "context", "html", "xhtml", "mail", "plaintext" }
           }
         end,
         ["clangd"] = function()
