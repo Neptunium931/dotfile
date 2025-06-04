@@ -37,6 +37,7 @@ return {
       "asm-lsp",
       "asmfmt",
       "latexindent",
+      "systemd-language-server",
     }
     vim.api.nvim_create_user_command("MasonInstallAll", function()
       vim.cmd("MasonInstall " .. table.concat(ensure_installed, " "))
@@ -54,7 +55,8 @@ return {
         "clangd",
         "ruff",
         "pyright",
-        "ltex",
+        "mesonlsp",
+        -- "ltex",
       },
       handlers = {
         function(server_name) -- default handler (optional)
@@ -65,7 +67,7 @@ return {
         ["ltex"] = function ()
           local lspconfig = require("lspconfig")
           lspconfig.ltex.setup {
-            language = "en-GB",
+            language = {"en", "fr"},
             enabled = { "bibtex", "gitcommit", "markdown", "org", "tex", "restructuredtext", "rsweave", "latex", "quarto", "rmd", "context", "html", "xhtml", "mail", "plaintext" }
           }
         end,

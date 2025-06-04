@@ -7,6 +7,8 @@ key.set('n', '<S-q>', function () vim.cmd('bdelete') end)
 key.set('n', '<leader>lv', function() vim.cmd('VimtexView')    end)
 key.set('n', '<leader>ll', function() vim.cmd('VimtexCompile') end)
 
+key.set('n', '<leader>rm', function() require('render-markdown').toggle() end)
+
 -- refactoring.nvim
 key.set('x', '<leader>re', function() require('refactoring').refactor('Extract Function') end)
 key.set('x', '<leader>rf', function() require('refactoring').refactor('Extract Function To File') end)
