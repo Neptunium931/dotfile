@@ -85,13 +85,6 @@ return {
           local lspconfig = require("lspconfig")
           lspconfig.lua_ls.setup {
             capabilities = capabilities,
-            settings = {
-              Lua = {
-                diagnostics = {
-                  globals = { "bit", "vim", "it", "describe", "before_each", "after_each" },
-                }
-              }
-            }
           }
         end,
       }
@@ -120,7 +113,9 @@ return {
     })
 
     vim.diagnostic.config({
-      -- update_in_insert = true,
+      update_in_insert = true,
+      virtual_text = false,
+      virtual_lines = true,
       float = {
         focusable = false,
         style = "minimal",

@@ -5,9 +5,9 @@ vim.diagnostic.config({ virtual_text = true })
 
 local opts = {
   sources = {
-    null_ls.builtins.formatting.clang_format.with({
-      extra_filetypes = {"c", "cpp"}
-    }),
+    -- null_ls.builtins.formatting.clang_format.with({
+    --   extra_filetypes = {"c", "cpp"}
+    -- }),
     null_ls.builtins.formatting.black.with({
         extra_filetypes = { "python" },
     }),

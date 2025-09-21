@@ -1,8 +1,14 @@
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'asm', 'c', 'cpp', 'py', 'lua', 'sh' },
+  callback = function() vim.treesitter.start() end,
+})
+
 return {
-	"nvim-treesitter/nvim-treesitter",
+	"Neptunium931/nvim-treesitter",
+  branch = "main",
 	build = ":TSUpdate",
 	config = function(_)
-		require("nvim-treesitter.configs").setup({
+		require("nvim-treesitter").setup({
 			-- A list of parser names, or "all" (the listed parsers MUST always be installed)
 			ensure_installed = { "c", "cpp", "lua", "vim", "vimdoc", "markdown", "markdown_inline" },
 			sync_install = false,

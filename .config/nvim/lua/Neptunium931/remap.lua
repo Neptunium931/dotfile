@@ -34,6 +34,14 @@ key.set('n', '<C-Down>' ,  ':resize +2<CR>')
 key.set('n', '<C-Left>' ,  ':vertical resize -2<CR>')
 key.set('n', '<C-Right>' ,  ':vertical resize +2<CR>')
 
+-- lsp
+key.set('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action({apply=true})<CR>')
+key.set('n', '<leader>cd', '<cmd>lua vim.lsp.buf.definition()<CR>')
+key.set('n', '<leader>ci', '<cmd>lua vim.lsp.buf.implementation()<CR>')
+key.set('n', '<leader>cr', '<cmd>lua vim.lsp.buf.references()<CR>')
+key.set('n', '<leader>ct', '<cmd>lua vim.lsp.buf.type_definition()<CR>')
+key.set('n', '<leader>cw', '<cmd>lua vim.lsp.buf.workspace_symbol()<CR>')
+
 g.mapleader = ' '
 g.c_syntax_for_h = 1
 vim.cmd('set colorcolumn=80')
@@ -68,4 +76,13 @@ g.mapleader = ' '
 for _, provider in ipairs { 'node', 'perl', 'python3', 'ruby' } do
   vim.g['loaded_' .. provider .. '_provider'] = 0
 end
+vim.lsp.config("lua_ls", {
+  settings = {
+    Lua = {
+      workspace = {
+        library = vim.api.nvim_get_runtime_file("", true),
+      },
+    }
+  }
+})
 
