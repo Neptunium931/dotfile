@@ -46,3 +46,11 @@ esac
 if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
 fi
+
+if [[ -z $SSH_AGENT_PID ]]; then
+	if [ -f ~/.ssh/id_ed25519 ]; then
+		eval "$(ssh-agent -s)"
+		ssh-add ~/.ssh/id_ed25519
+	fi
+
+fi
