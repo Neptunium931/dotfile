@@ -18,4 +18,4 @@ StandardOutput=append:/home/neptunium/.satpaper.log
 StandardError=append:/home/neptunium/.satpaper.log
 
 [Install]
-WantedBy=default.target
+WantedBy=graphical-session.target

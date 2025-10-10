@@ -19,6 +19,8 @@ export VISUAL=nvim
 export EDITOR=$VISUAL
 export GPG_TTY=$(tty)
 
+export ANDROID_HOME=~/android-sdk
+
 # arduino
 export ARDUINO_DIR=/usr/share/arduino/
 export ARDMK_DIR=$HOME/.arduino/
@@ -26,9 +28,12 @@ export AVR_TOOLS_DIR=/usr
 export ARDUINO_LIB_PATH=/home/neptunium/.arduino/lib/
 
 export PATH=$HOME/.cargo/bin/:$PATH
-export PATH=$PATH:$HOME/.local/share/gem/ruby/3.3.0/bin:$HOME/.local/bin
+export PATH=$PATH:$HOME/.local/share/gem/ruby/3.4.0/bin:$HOME/.local/bin
 export PATH=$PATH:$HOME/.rvm/bin/
 export PATH=$PATH:$HOME/perso/bin
+export PATH=$PATH:$HOME/idapro-9.0/
+
+export PYTHONPATH=./venv/lib/python3.13/site-packages/
 
 # pnpm
 export PNPM_HOME="/home/neptunium/.local/share/pnpm"

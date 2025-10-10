@@ -12,3 +12,5 @@ git_init() {
 		git commit -m "Initial commit"
 	fi
 }
+
+alias gitlab='git -c core.sshCommand="/usr/bin/ssh -i ~/.ssh/id_ed25519"'

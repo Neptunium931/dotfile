@@ -2,6 +2,7 @@ vim.api.nvim_create_user_command('ColorMyPencils',
 function ()
   local hour = tonumber(os.date("%H"))
   local color = "rose-pine-moon"
+  hour = 0
   if hour < 16 and hour > 8 then
     color = "rose-pine-dawn"
   else
