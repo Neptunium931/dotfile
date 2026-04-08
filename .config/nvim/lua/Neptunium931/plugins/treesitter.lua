@@ -4,7 +4,7 @@ vim.api.nvim_create_autocmd('FileType', {
 })
 
 return {
-	"Neptunium931/nvim-treesitter",
+	"nvim-treesitter/nvim-treesitter",
   branch = "main",
 	build = ":TSUpdate",
 	config = function(_)
