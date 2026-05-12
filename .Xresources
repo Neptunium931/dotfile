@@ -25,3 +25,10 @@ URxvt.font: xft:Cascadia Code NF SemiBold:style=SemiBold,Regular:size=21
 *.color7:      #a89984
 *.color15:     #ebdbb2
 *.colorBD:     #ebdbb2
+
+! openbsd
+xterm*font: xft:Hack Nerd Font Mono:size=6:style=Bold
+xterm*scrollBar: false
+XTerm*vt100.translations: #override \
+    Alt Ctrl <Key> C: copy-selection(CLIPBOARD) \n\
+    Alt Ctrl <Key> V: insert-selection(CLIPBOARD)

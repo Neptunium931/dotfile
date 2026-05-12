@@ -1,34 +1,39 @@
 loadAliases() {
-	for file in $HOME/.config/alias/*.sh; do
-		source $file
-	done
+  for file in $HOME/.config/alias/*.sh; do
+    source $file
+  done
 }
 
 bash_prompt() {
-	PS1='${gebian_chroot:+($gebian_chroot)}'${blu}'$(git_branch)'${pur}' \W'${grn}' \$ '${clr}
+  PS1='${gebian_chroot:+($gebian_chroot)}'${blu}'$(git_branch)'${pur}' \W'${grn}' \$ '${clr}
 }
 
 printInfo() {
-	clear
+  clear
 
-	if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
-		printf "\n"
-		printf "   %s\n" "IP ADDR: $(curl -s ifconfig.me)"
-		printf "   %s\n" "USER: $(echo $USER)"
-		printf "   %s\n" "DATE: $(date)"
-		printf "   %s\n" "UPTIME: $(uptime -p)"
-		printf "   %s\n" "HOSTNAME: $(hostname -f)"
-		printf "   %s\n" "CPU: $(awk -F: '/model name/{print $2}' /proc/cpuinfo | head -1)"
-		printf "   %s\n" "KERNEL: $(uname -rms)"
-		printf "   %s\n" "RESOLUTION: $(xrandr | awk '/\*/{printf $1" "}')"
-		printf "   %s\n" "MEMORY: $(free -m -h | awk '/Mem/{print $3"/"$2}')"
-		printf "\n"
-	fi
+  if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+    printf "\n"
+    printf "   %s\n" "IP ADDR: $(curl -s ifconfig.me)"
+    printf "   %s\n" "USER: $(echo $USER)"
+    printf "   %s\n" "DATE: $(date)"
+    printf "   %s\n" "UPTIME: $(uptime -p)"
+    printf "   %s\n" "HOSTNAME: $(hostname -f)"
+    printf "   %s\n" "CPU: $(awk -F: '/model name/{print $2}' /proc/cpuinfo | head -1)"
+    printf "   %s\n" "KERNEL: $(uname -rms)"
+    printf "   %s\n" "RESOLUTION: $(xrandr | awk '/\*/{printf $1" "}')"
+    printf "   %s\n" "MEMORY: $(free -m -h | awk '/Mem/{print $3"/"$2}')"
+    printf "\n"
+  fi
 }
 
 # Use bash-completion, if available
 [[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] &&
-	. /usr/share/bash-completion/bash_completion
+  . /usr/share/bash-completion/bash_completion
+
+
+if [ $(uname) == "OpenBSD" ]; then
+  . /usr/local/share/bash-completion/bash_completion
+fi
 
 loadAliases
 
@@ -38,5 +43,8 @@ PS1='\[\e[96m\]\u@\H\[\e[0m\] \[\e[38;5;35m\]\w\[\e[0m\](\[\e[93m\]${PS1_CMD1}\[
 printInfo
 
 set -o vi
-setxkbmap -layout fr -variant us -option "caps:swapescape"
-eval "$(zoxide init --cmd cd bash)"
+
+if [ $(uname) == "OpenBSD" ]; then
+  setxkbmap -layout fr -variant us -option "caps:swapescape"
+  eval "$(zoxide init --cmd cd bash)"
+fi

@@ -19,38 +19,45 @@ export VISUAL=nvim
 export EDITOR=$VISUAL
 export GPG_TTY=$(tty)
 
-export ANDROID_HOME=~/android-sdk
+if [ $(uname) != "OpenBSD" ]; then
+  export ANDROID_HOME=~/android-sdk
+  # arduino
+  export ARDUINO_DIR=/usr/share/arduino/
+  export ARDMK_DIR=$HOME/.arduino/
+  export AVR_TOOLS_DIR=/usr
+  export ARDUINO_LIB_PATH=/home/neptunium/.arduino/lib/
 
-# arduino
-export ARDUINO_DIR=/usr/share/arduino/
-export ARDMK_DIR=$HOME/.arduino/
-export AVR_TOOLS_DIR=/usr
-export ARDUINO_LIB_PATH=/home/neptunium/.arduino/lib/
+  export PATH=$PATH:$HOME/.local/share/gem/ruby/3.4.0/bin:$HOME/.local/bin
+  export PATH=$PATH:$HOME/.rvm/bin/
+  export PATH=$PATH:$HOME/perso/bin
+  export PATH=$PATH:$HOME/idapro-9.0/
 
-export PATH=$HOME/.cargo/bin/:$PATH
-export PATH=$PATH:$HOME/.local/share/gem/ruby/3.4.0/bin:$HOME/.local/bin
-export PATH=$PATH:$HOME/.rvm/bin/
-export PATH=$PATH:$HOME/perso/bin
-export PATH=$PATH:$HOME/idapro-9.0/
-
-export PYTHONPATH=./venv/lib/python3.13/site-packages/
+  export PYTHONPATH=./venv/lib/python3.13/site-packages/
 
 # pnpm
 export PNPM_HOME="/home/neptunium/.local/share/pnpm"
 case ":$PATH:" in
-*":$PNPM_HOME:"*) ;;
-*) export PATH="$PNPM_HOME:$PATH" ;;
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
 
-if [ -f ~/.bashrc ]; then
-	. ~/.bashrc
-fi
-
 if [[ -z $SSH_AGENT_PID ]]; then
-	if [ -f ~/.ssh/id_ed25519 ]; then
-		eval "$(ssh-agent -s)"
-		ssh-add ~/.ssh/id_ed25519
-	fi
+  if [ -f ~/.ssh/id_ed25519 ]; then
+    eval "$(ssh-agent -s)"
+    ssh-add ~/.ssh/id_ed25519
+  fi
 
 fi
+fi
+
+export PATH=$HOME/.cargo/bin/:$PATH
+export GOROOT=$HOME/port/go
+export GOPATH=$HOME/go/
+export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
+export GOPROXY=direct
+
+if [ -f ~/.bashrc ]; then
+  . ~/.bashrc
+fi
+

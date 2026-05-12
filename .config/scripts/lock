@@ -7,6 +7,8 @@ TEXT='#00897bE6'
 WRONG='#880000bb'
 VERIFYING='#00564dE6'
 
+
+if [ $(uname) != "OpenBSD" ]; then
 i3lock \
 --insidever-color=$CLEAR     \
 --ringver-color=$VERIFYING   \
@@ -33,4 +35,7 @@ i3lock \
 --indicator                  \
 --time-str="%H:%M:%S"        \
 --date-str="%A, %d-%m-%Y"       \
---keylayout 1                 \
+--keylayout 1                 
+else
+  i3lock
+fi

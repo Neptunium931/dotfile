@@ -11,8 +11,8 @@
 
 set $mod Mod4
 # exec --no-startup-id setxkbmap -layout fr
-exec --no-startup-id setxkbmap -layout us -variant altgr-intl -option "caps:swapescape"
-exec --no-startup-id dunst
+# exec --no-startup-id setxkbmap -layout us -variant altgr-intl -option "caps:swapescape"
+# exec --no-startup-id dunst
 
 # exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
@@ -226,6 +226,6 @@ mode "move" {
 # finds out, if available)
 bar {
     position top
-    font pango:Cascadia Code NF SemiBold 10
+    font pango:Cascadia Code NF SemiBold 5
     status_command i3status
 }

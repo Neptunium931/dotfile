@@ -1,3 +1,7 @@
+local OS = vim.loop.os_uname().sysname
+if (OS == "OpenBSD") then
+   return {}
+end
 return {
   "supermaven-inc/supermaven-nvim",
   config = function()
